@@ -7,7 +7,7 @@ window.addEventsListener = (events) => {
                 document.addEventListener(eventName, (e) => animation(e, document));
                 return;
             }
-            if (eventHandler.hasOwnProperty("all"))
+            if (eventHandler.hasOwnProperty("all") && eventHandler.all)
                 document.querySelectorAll(eventHandler.selector).forEach(element => element.addEventListener(eventName, (e) => animation(e, element)));
             else
                 document.querySelector(eventHandler.selector).addEventListener(eventName, (e) => animation(e, document.querySelector(eventHandler.selector)));
