@@ -1,4 +1,4 @@
-window.addEventsListener = (events) => {
+function addEventsListener(events) => {
     Object.keys(events).forEach(eventName => {
         Array.from(events[eventName]).forEach(eventHandler => {
             let animation = eventHandler.animation;
